@@ -1,0 +1,122 @@
+/* Fonts */
+@font-face {
+    font-family: "Ancona Heavy";
+    src: url(Fonts/Ancona\ Cd\ Heavy\ Regular.ttf);
+}
+@font-face {
+    font-family: "Ancona Narrow";
+    src: url(Fonts/Ancona-Narrow\ Regular.ttf);
+}
+@font-face {
+    font-family: "Aargau Bold";
+    src: url(Fonts/Aargau\ Bold.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Carlito:ital@1&display=swap');
+
+:root{
+    --heading: "Ancona Heavy";
+    --subHeading: 'Carlito', sans-serif;
+    --meetTheTeam: "Ancona Narrow";
+    --getInTouch: "Aargau Bold"; 
+}
+
+/* Common CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+.wrapper1{
+    width: 800px;
+}
+
+/* Header */
+
+#menu{
+    background: white;
+}
+#navMenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#headerMenu{
+    display: flex;
+    align-items: initial;
+    box-sizing: border-box;
+}
+nav >a{
+    color: black;
+    font-family: var(--subHeading);
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 0 10px;
+    /* font-weight: 200; */
+    /* letter-spacing: 0.1cm; */
+    text-decoration: none;
+}
+nav >a:hover{
+    color: #ed7218;
+    border-bottom: 3px solid #ed7218;
+}
+.active{
+    color: #ed7218;
+    border-bottom: 3px solid #ed7218;
+}
+.iconRules{
+    background: black;
+    margin: 5px 0;
+    width: 50px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+/* Footer */
+
+#footer{
+    background: #333333;
+    padding: 20px 0;
+}
+#footerId >p{
+    color: white;
+    font-family: var(--subHeading);
+    font-size: 16px;
+    text-align: center;
+    color: #7b7676;
+}
+
+/* Media Query */
+
+@media screen and (max-width:1250px) {
+
+    /* Common */
+    .wrapper{
+        width: 96%;
+    }
+}
+
+@media screen and (max-width:800px) {
+            
+    /* Header */
+    #headerMenu{
+        display: none;
+    }
+}
+
+@media screen and (max-width:400px) {
+            
+    /* Header */
+    #navMenu >img{
+        width: 130px;
+    }
+    .iconRules{
+        width: 30px;
+        height: 5px;
+    }
+}

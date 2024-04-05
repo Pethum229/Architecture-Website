@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 03 Design</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+
+        /* Main Section */
+
+        #mainSection{
+            background: #e0e5eb;
+            padding-bottom: 60px;
+        }
+        #mainSectionId{
+            display: flex;
+            padding-top: 50px;
+        }
+        #mainLeft{
+            padding-top: 80px;
+            padding-left: 40px;
+        }
+        #mainLeft >h1{
+            color: #ed7218;
+            font-family: var(--heading);
+            font-size: 80px;
+            line-height: 1.1;
+        }
+        #mainLeft >p{
+            margin-top: 20px;
+            font-size: 20px;
+            font-family: var(--subHeading);
+            font-style: italic;
+        }
+        #mainLeft >button{
+            margin-top: 40px;
+            background: #ed7218;
+            color: white;
+            text-transform: uppercase;
+            font-size: 25px;
+            border: none;
+            padding: 8px 30px;
+            border-radius: 5px;
+        }
+        #threeCards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #cardOne{
+            background: #ed7218;
+        }
+        .card{
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .overflow{
+            background: white;
+            border: 150px;
+            width: 100px;
+            height: 100px;
+            border-radius: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .overflow >img{
+            /* background: white; */
+            /* border-radius: 80px; */
+            /* color: #ed7218; */
+            /* padding: 20px; */
+            width: 75px;
+        }
+        .card >h2{
+            font-family: var(--meetTheTeam);
+            text-transform: uppercase;
+            letter-spacing: 0.1cm;
+            font-size: 40px;
+            color: white;
+            margin: 10px 0;
+        }
+        .card >p{
+            font-family: var(--subHeading);
+            font-style: italic;
+            color: white;
+        }
+        .card >button{
+            color: black;
+            background: white;
+            text-transform: uppercase;
+            padding: 5px 35px;
+            font-size: 20px;
+            margin-top: 25px;
+            border: none;
+            border-radius: 2px;
+        }
+        #cardTwo{
+            background: #f48024;
+        }
+        #cardThree{
+            background: #f9ac44;
+        }
+
+        /* Meet the Team Section */
+
+        #meetTheTeam{
+            background: white;
+        }
+        #orangeBg{
+            margin-top: -220px;
+            background: #f48024;
+            width: 1200px;
+            height: 300px;
+        }
+        #wrapper1Id{
+            padding-top: 50px;
+        }
+        #meetTheTeamBottom{
+            display: flex;
+            justify-content: space-around;
+        }
+        #meetTheTeamTop >h1{
+            font-family: var(--meetTheTeam);
+            font-size: 80px;
+        }
+        #team{
+            color: #ed7218;
+            font-weight: bolder;
+            font-size: 90px;
+        }
+        #meetTheTeamTop >p{
+            font-family: var(--subHeading);
+            font-style: italic;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        /* Construction Company Section */
+
+        #constructionCompany{
+            background: #e0e5eb;
+        }
+        #constructionComId{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 80px 0;
+        }
+        #ccLeftDiv{
+            width: 50%;
+        }
+        #ccRightDiv{
+            width: 50%;
+        }
+        #ccLeftDiv >h1{
+            color: black;
+            font-size: 90px;
+            line-height: 0.9;
+            font-family: var(--meetTheTeam);
+        }
+        #ccLeftDiv >h1::before{
+            content: "Welcome to";
+            display: block;
+            text-transform: uppercase;
+            color: #f4832a;
+            font-family: var(--subHeading);
+            font-size: 35px;
+        }
+        #ccLeftDiv >hr{
+            width: 35%;
+            height: 8px;
+            background: #ed7218;
+            border: none;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        #ccLeftDiv >p{
+            font-family: var(--subHeading);
+            font-style: italic;
+            color: #a2a4a6;
+            font-size: 26px;
+        }
+        #ccRightDiv >p{
+            font-family: var(--subHeading);
+            font-size: 20px;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        #ccRightDiv >button{
+            font-size: 22px;
+            font-family: var(--subHeading);
+            text-transform: uppercase;
+            padding: 10px 30px;
+            background: #f48024;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* How We Work Section */
+
+        #howWeWork{
+            background: white;
+            position: relative;
+            /* width: fit-content; */
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 1;
+            padding-bottom: 50px;
+        }
+        #howWeWork::before{
+            display: flex;
+            content: "";
+            width: 1200px;
+            background: #ed7218;
+            height: 350px;
+            position: absolute;
+            z-index: -1;
+        }
+        #howWeWorkText{
+            width: 65%;
+        }
+        #howWeWorkText >h1{
+            font-family: var(--heading);
+            font-size: 70px;
+            color: #f48024;
+            margin-top: 80px;
+            margin-bottom: 20px;
+        }
+        #howWeWorkText >p{
+            font-family: var(--subHeading);
+            font-style: italic;
+            font-size: 18px;
+        }
+        #centerOrangeDiv{
+            width: 1200px;
+            background: #ed7218;
+            height: 100px;
+        }
+        #howWeWorkImg{
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        #row1{
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+        #row2{
+            display: flex;
+            justify-content: space-between;
+        }
+        #col1{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Build With Us Section */
+
+        #buildWithUs{
+            background: linear-gradient(180deg, #e0e5eb 60%, #f48024 40%);
+            padding: 70px 0;
+        }
+        #buildWithUsId{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #align{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -180px;
+        }
+        #buildCard{
+            background: white;
+            width: 50%;
+            padding: 50px 40px;
+        }
+        #buildCard >h1{
+            font-family: var(--heading);
+            font-size: 70px;
+            color: #ed7218;
+        }
+        #buildCard >p{
+            font-size: 18px;
+            font-family: var(--subHeading);
+            font-style: italic;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        #buildCard >button{
+            font-family: var(--subHeading);
+            font-size: 22px;
+            text-transform: uppercase;
+            padding: 5px 30px;
+            background: #ed7218;
+            border: none;
+            color: white;
+        }
+
+        /* Lean More Secion */
+
+        #learnMore{
+            background: white;
+            padding: 80px 0;
+        }
+        #learnMoreId{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #learnMoreId >p{
+            font-family: var(--subHeading);
+            font-size: 22px;
+            font-style: italic;
+            color: #a3a4a5;
+            width: 60%;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        #learnMoreId >button{
+            font-size: 22px;
+            font-family: var(--subHeading);
+            background: #ed7218;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px 40px;
+            border: none;
+        }
+
+        /* Expert Section */
+
+        #expert{
+            background: #ed7218;
+            padding: 75px;
+        }
+        #imgWithTxt{
+            display: flex;
+            justify-content: space-between;
+        }
+        #imgWithTxt{
+            height: 350px;
+        }
+        #imgWithTxt >h1{
+            color: white;
+            font-family: var(--heading);
+            font-size: 65px;
+            width: 50%;
+            line-height: 1.1;
+        }
+        #twoImages{
+            margin-top: -80px;
+        }
+        #ourVisionId{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -150px;
+            margin-right: 75px;
+        }
+        #ourVision{
+            width: 40%;
+            background: white;
+            padding: 20px;
+        }
+        #ourVision >h2{
+            font-family: var(--heading);
+            font-size: 40px;
+            color: black;
+            text-transform: uppercase;
+        }
+        #ourVision >p{
+            font-size: 20px;
+            font-family: var(--subHeading);
+            font-style: italic;
+            margin: 20px 0 50px 0;
+        }
+        #ourVision >button{
+            font-size: 22px;
+            font-family: var(--subHeading);
+            background: #ed7218;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px 40px;
+            border: none;
+        }
+
+        /* Get in Touch Section */
+
+        #getInTouch{
+            background: #292d33;
+            /* box-shadow: inset 0 0 0 20px #292d33; */
+            padding: 50px 0 30px 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 0;
+        }
+        #getInTouch::before{
+            content: "";
+            position: absolute;
+            background: #f48024;
+            width: 80%;
+            height: 250px;
+            z-index: -1;
+        }
+        #getInTouchId{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #getInTouchId >h1{
+            font-family: var(--getInTouch);
+            font-size: 80px;
+            color: #f48024;
+            /* font-weight: lighter; */
+            margin-bottom: 20px;
+        }
+        #getInTouchId >p{
+            font-size: 20px;
+            font-family: var(--subHeading);
+            color: white;
+            /* font-style: italic; */
+            margin-bottom: 50px;
+        }
+        #getInTouchId >img{
+            margin-top: 100px;
+        }
+        #contact{
+            display: flex;
+            background: white;
+            width: 80%;
+            padding: 50px 30px;
+        }
+        #details{
+            width: 30%;
+            margin-right: 60px;
+        }
+        #form{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+        }
+        .cdRow{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .cdRow >img{
+            width: 40px;
+        }
+        .cdRow >p{
+            font-family: var(--subHeading);
+            font-size: 20px;
+            text-align: left;
+        }
+        #form >input, #form >textarea{
+            border: 1px solid black;
+            height: 50px;
+            margin: 5px 0;
+            font-size: 17px;
+            font-family: var(--subHeading);
+            color: #918a8a;
+            padding-left: 10px;
+        }
+        #form >textarea{
+            padding-top: 10px;
+            height: 100px;
+        }
+        #form >button{
+            font-size: 22px;
+            font-family: var(--subHeading);
+            background: #F48024;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px 40px;
+            border: none;
+            width: 30%;
+        }
+
+        /* Media Query */
+
+        @media screen and (max-width:1250px) {
+
+            /* Meet the Team Section */
+            #orangeBg{
+                width: 90%;
+            }
+
+            /* Expert Section */
+            #imgWithTxt > h1{
+                font-size: 50px;
+            }
+            #ourVision > h2{
+                font-size: 35px;
+            }
+            #ourVision > p{
+                font-size: 17px;
+                margin: 10px 0;
+            }
+            #ourVision > button{
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+            #expert{
+                padding: 40px;
+            }
+        }
+
+        @media screen and (max-width:1150px) {
+            
+            /* Main Section */
+            #mainSectionId{
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            #mainSectionId >img{
+                width: 500px;
+            }
+            #mainLeft{
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #mainLeft > h1{
+                line-height: 1;
+                text-align: center;
+            }
+            #mainLeft > p{
+                text-align: center;
+            }
+            .card >p{
+                text-align: center;
+            }
+
+            /* How We Work Section */
+
+            #howWeWorkText > h1{
+                margin-top: 0px;
+                margin-bottom: 5px;
+            }
+            #howWeWorkText{
+                text-align: center;
+                width: 100%;
+            }
+            #howWeWorkImg{
+                width: 100%;
+                margin-top: 0;
+            }
+
+            /* Get in Touch Section */
+            #contact{
+                align-items: center;
+            }
+            #getInTouch::before{
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width:1100px) {
+
+            /* Construction Company Section  */
+            #constructionComId{
+                align-items: center;
+            }
+
+            /* Learn More Section */
+            #learnMore{
+                padding: 30px 0;
+            }
+            #learnMoreId > p{
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media screen and (max-width:1000px) {
+            
+            /* How We Work Section */
+            #howWeWorkText > h1{
+                margin: 0;
+                font-size: 55px;
+            }
+            #howWeWorkText > p{
+                font-size: 14px;
+            }
+            #row1{
+                margin-top: 10px;
+            }
+            #row1 >img{
+                width: 30%;
+            }
+            #col1{
+                width: 30%;
+            }
+            #col2{
+                width: 65%;
+            }
+            #col2 >img{
+                width: 100%;
+            }
+
+            /* Build With Us Section */
+            #buildWithUsId >img{
+                width: 80%;
+            }
+            #buildCard{
+                padding: 10px 20px 20px 20px;
+            }
+            #buildCard > h1{
+                font-size: 45px;
+            }
+            #buildCard > p{
+                margin-top: 0;
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+
+            /* Expert Section */
+            #ourVisionId{
+                margin-right: 0;
+            }
+        }
+
+        @media screen and (max-width:900px) {
+            
+            /* Meet the Team Section */
+            #meetTheTeamTop{
+                text-align: center;
+            }
+            #wrapper1Id{
+                padding-top: 0;
+            }
+            #meetTheTeamId{
+                display: flex;
+                justify-content: center;
+            }
+            #orangeBg{
+                width: 100%;
+            }
+            #meetTheTeamBottom >img{
+                width: 40%;
+                height: 50%;
+            }
+
+            /* Expert Section */
+            #twoImages{
+                display: flex;
+            }
+            #twoImages >img{
+                width: 50%;
+            }
+            #ourVisionId{
+                margin-top: 0;
+            }
+            #ourVisionId{
+                width: 50%;
+            }
+            #ourVision{
+                width: 100%;
+            }
+            #imgWithTxt > h1{
+                font-size: 40px;
+            }
+
+            /* Get in Touch Section */
+            #getInTouch{
+                padding: 20px 0 10px 0;
+            }
+            #contact{
+                flex-direction: column;
+            }
+            #details{
+                width: 100%;
+                margin: 0;
+            }
+            .cdRow{
+                align-items: center;
+            }
+            #form{
+                width: 100%;
+                align-items: center;
+            }
+            #form > input, #form > textarea{
+                width: 90%;
+            }
+            #getInTouchId > h1{
+                font-size: 60px;
+                margin-bottom: 0;
+            }
+            #getInTouchId > p{
+                font-size: 17px;
+                margin-bottom: 20px;
+            }
+            #getInTouchId > img{
+                margin-top: 25px;
+            }
+            .cdRow > p{
+                text-align: center;
+            }
+            #form > button{
+                font-size: 15px;
+                padding: 10px 30px;
+                width: fit-content;
+            }
+        }
+
+        @media screen and (max-width:850px) {
+            
+            /* Construction Company Section  */
+            #constructionComId{
+                flex-direction: column;
+                padding: 30px 0;
+            }
+            #ccLeftDiv{
+                width: 100%;
+            }
+            #ccLeftDiv > hr{
+                margin-bottom: 16px;
+            }
+            #ccLeftDiv > p{
+                font-size: 20px;
+            }
+            #ccRightDiv{
+                width: 100%;
+            }
+            #ccRightDiv > p{
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+            #ccRightDiv > button{
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width:750px) {
+            
+            /* Main Section */
+            #mainLeft > h1{
+                font-size: 55px;
+            }
+            #mainLeft > p{
+                font-size: 18px;
+            }
+            #mainLeft > button{
+                margin-top: 15px;
+                font-size: 18px;
+            }
+            #mainSectionId > img{
+                width: 365px;
+            }
+            #threeCards{
+                flex-direction: column;
+            }
+            .card{
+                width: 100%;
+            }
+
+            /* Learn More Section */
+            #learnMoreId > p{
+                font-size: 16px;
+            }
+            #learnMoreId > button{
+                font-size: 15px;
+                padding: 10px 20px;
+            }
+        }
+
+        @media screen and (max-width:700px) {
+
+            /* Expert Section  */
+            #expert{
+                padding: 30px 0 30px 0;
+            }
+            #imgWithTxt{
+                flex-direction: column;
+                align-items: center;
+            }
+            #imgWithTxt > h1{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            #twoImages{
+                margin-top: 50px;
+            }
+        }
+
+        @media screen and (max-width:650px) {
+
+            /* Construction Company Section */
+            #constructionComId{
+                padding: 15px 0;
+            }
+            #ccLeftDiv{
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #ccLeftDiv > h1{
+                font-size: 55px;
+            }
+            #ccLeftDiv > h1::before{
+                font-size: 25px;
+            }
+            #ccLeftDiv > hr{
+                margin-top: 5px;
+            }
+            #ccLeftDiv > p{
+                font-size: 17px;
+            }
+            #ccRightDiv{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #ccRightDiv > p{
+                font-size: 14px;
+                text-align: center;
+            }
+
+            /* Build With Us Section */
+            #buildWithUs{
+                padding: 30px 0;
+            }
+            #align{
+                margin-top: 20px;
+                justify-content: center;
+            }
+            #buildCard{
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            
+            /* Meet the Team Section */
+            #meetTheTeamTop > h1{
+                font-size: 60px;
+            }
+            #team{
+                font-size: 65px;
+            }
+            #meetTheTeamTop > p{
+                font-size: 14px;
+            }
+            #meetTheTeamBottom > img{
+                width: 200px;
+                height: 200px;
+            }
+            #orangeBg{
+                height: 130px;
+            }
+
+            /* Construction Company Section */
+            #constructionCompany{
+                padding-top: 120px;
+            }
+
+            /* How We Work Section */
+            #howWeWork{
+                padding-bottom: 10px;
+            }
+            #row1{
+                flex-wrap: wrap;
+                margin: 0;
+                justify-content: space-around;
+            }
+            #row2{
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+            }
+            #row1 >img{
+                width: 48%;
+                margin-bottom: 10px;
+            }
+            #toRes{
+                width: 96% !important;
+            }
+            #col1{
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            #col1 >img{
+                width: 48%;
+                margin-bottom: 10px;
+            }
+            #col2{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+            #col2 >img{
+                width: 96%;
+                margin-bottom: 10px;
+            }
+
+            /* Expert Section  */
+            #imgWithTxt{
+                align-items: normal;
+            }
+            #twoImages{
+                flex-direction: column-reverse;
+                margin-top: 0;
+            }
+            #ourVisionId{
+                width: 100%;
+            }
+            #twoImages > img{
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            
+            /* Main Section */
+            #mainSectionId{
+                padding-top: 10px;
+            }
+            #mainLeft > h1{
+                font-size: 34px;
+            }
+            #mainLeft > p{
+                font-size: 14px;
+            }
+            #mainSectionId > img{
+                width: 250px;
+            }
+            .overflow{
+                width: 60px;
+                height: 60px;
+                padding: 10px;
+            }
+            .card > h2{
+                font-size: 30px;
+                margin: 5px 0;
+            }
+            .card > p{
+                font-size: 14px;
+            }
+            .card > button{
+                margin-top: 10px;
+                font-size: 15px;
+            }
+
+            /* Meet the Team Section */
+            #meetTheTeamBottom{
+                flex-direction: column;
+                align-items: center;
+            }
+            #meetTheTeamBottom > img{
+                margin-bottom: 10px;
+            }
+
+            /* How We Work Section */
+            #howWeWorkText > h1{
+                font-size: 45px;
+            }
+
+            /* Build With Us Section */
+            #buildCard > h1{
+                font-size: 35px;
+            }
+            #buildCard > p{
+                font-size: 14px;
+            }
+            #buildCard > button{
+                font-size: 18px;
+            }
+
+            /* Get in Touch Section */
+            #getInTouchId > h1{
+                font-size: 45px;
+            }
+            #getInTouchId > p{
+                font-size: 16px;
+            }
+            #contact{
+                padding: 20px 10px;
+            }
+            .cdRow{
+                margin-bottom: 10px;
+            }
+            .cdRow > p{
+                font-size: 15px;
+            }
+            #form > button{
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+
+    <header id="menu">
+        <div id="navMenu" class="wrapper">
+            <img src="images/logo.png" alt="Logo">
+            <nav id="headerMenu">
+                <a class="active" href="#">Home</a>
+                <span>|</span>
+                <a href="#">About Us</a>
+                <span>|</span>
+                <a href="#">Our Projects</a>
+                <span>|</span>
+                <a href="#">Contact Us</a>
+            </nav>
+            <div id="menuIcon">
+                <div class="iconRules"></div>
+                <div class="iconRules"></div>
+                <div class="iconRules"></div>
+            </div>
+        </div>
+    </header> 
+    
+    <!-- Main Section -->
+
+    <section id="mainSection">
+        <div id="mainSectionId" class="wrapper">
+            <img src="images/checking-blueprint.png" alt="Checking Bluprint">
+            <div id="mainLeft">
+                <h1>Architecture, Engineering & Design Firm</h1>
+                <p>We are the authority for completing construction projects in environmentally sensitive surroundings</p>
+                <button>Read More</button>
+            </div>
+        </div>
+        <div id="threeCards" class="wrapper">
+            <div id="cardOne" class="card">
+                <div class="overflow">
+                    <image src="images/icons/graph.svg">
+                </div>
+                <h2>Analysis</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci distinctio asperiores aspernatur.</p>
+                <button>More</button>
+            </div>
+            <div id="cardTwo" class="card">
+                <div class="overflow">
+                    <image src="images/icons/plan.svg">
+                </div>
+                <h2>Planning</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci distinctio asperiores aspernatur.</p>
+                <button>More</button>
+            </div>
+            <div id="cardThree" class="card">
+                <div class="overflow">
+                    <image src="images/icons/tablet.svg">
+                </div>
+                <h2>Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci distinctio asperiores aspernatur.</p>
+                <button>More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team Section -->
+
+    <section id="meetTheTeam">
+        <div id="meetTheTeamId" class="wrapper">
+            <div id="wrapper1Id" class="wrapper1">
+                <div id="meetTheTeamTop">
+                    <h1>Meet the <span id="team">team</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias enim nam non sunt impedit ratione voluptate soluta natus inventore voluptates sequi, excepturi, accusamus repellendus vel quis. Pariatur a nesciunt dolorem quod in esse? Dolor vel voluptate illo error ut voluptas!</p>
+                </div>
+                <div id="meetTheTeamBottom">
+                    <img src="images/boy.png" alt="Boy">
+                    <img src="images/girl.png" alt="Girl">
+                </div>
+            </div>
+        </div>
+        <div id="orangeBg"></div>
+    </section>
+
+    <!-- Construction Company Section -->
+
+    <section id="constructionCompany">
+        <div id="constructionComId" class="wrapper">
+            <div id="ccLeftDiv">
+                <h1>Construction Company</h1>
+                <hr>
+                <p>We are the authority for completing construction projects in environmentally</p>
+            </div>
+            <div id="ccRightDiv">
+                <p>It is a long established fact that a reader will be districtd by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of lettters, as opposed to using 'Content here, content here,' making it look like readable English. Many desktop publishing packages and web pages editorsnow use Lorem Ipsum as their default model text, and a search for 'Lorem Ipsum' will uncover many web sites still thir infancy. Various versions</p>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Section -->
+
+    <section id="howWeWork">
+        <div id="content" class="wrapper">
+            <div id="howWeWorkText">
+                <h1>How We Work</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lprem Ipsum is that it has a more-or-less normal distibutuin of letters, as a opposed to using 'Content here, content here', that a reader will be distracted by the readable content of page</p>
+            </div>
+            <div id="howWeWorkImg">
+                <div id="row1">
+                    <img src="images/building1.png" alt="Building">
+                    <img src="images/building2.png" alt="Building">
+                    <img id="toRes" src="images/site-girl.png" alt="Site Girl">
+                </div>
+                <div id="row2">
+                    <div id="col1">
+                        <img src="images/building3.png" alt="Building">
+                        <img src="images/building4.png" alt="Building">
+                    </div>
+                    <div id="col2">
+                        <img src="images/engineer.png" alt="Engineer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Build With Us Section -->
+
+    <section id="buildWithUs">
+        <div id="buildWithUsId" class="wrapper">
+            <img src="images/engineer-architect.jpg" alt="Engineer Architect">
+            <div id="align">
+                <div id="buildCard">
+                    <h1>Build With Us</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it</p>
+                    <button>Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learn More Section -->
+
+    <section id="learnMore">
+        <div id="learnMoreId" class="wrapper">
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking ai its layout. The point od using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposde to We are the authority for completing construction projects in environmentally</p>
+            <button>Learn More</button>
+        </div>
+    </section>
+
+    <!-- Expert Section -->
+
+    <section id="expert">
+        <div class="wrapper">
+            <div id="imgWithTxt">
+                <h1>Expert, Efficient, Collaborative, Build With Experience</h1>
+                <img src="images/house.jpg" alt="House">
+            </div>
+            <div id="twoImages">
+                <img src="images/business-people-meeting.jpg" alt="Bussiness People Meeting">
+                <div id="ourVisionId">
+                    <div id="ourVision">
+                        <h2>Our Vision</h2>
+                        <p>It is a long established fact that a reader will be distractd by the readable content of a page when looking at its layout</p>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get in Touch Section -->
+
+    <section id="getInTouch">
+        <div id="getInTouchId" class="wrapper">
+            <h1>Get in Touch!</h1>
+            <p>We are looking forward to start a project with you</p>
+            <div id="contact">
+                <div id="details">
+                    <div class="cdRow">
+                        <img src="images/icons/location.png" alt="Location Icon">
+                        <p>121 Rocket Street,21 Avenue, New York, NY 92103-9000</p>
+                    </div>
+                    <div class="cdRow">
+                        <img src="images/icons/call.png" alt="Call Icon">
+                        <p>1 (234) 567-891</p>
+                        <p>1 (234) 987-654</p>
+                    </div>
+                    <div class="cdRow">
+                        <img src="images/icons/clock.png" alt="Clock Icon">
+                        <p>Mon - Fri ..... 10am - pm</p>
+                        <p>Sat, Sun ..... Closed</p>
+                    </div>
+                </div>
+                <form id="form" action="">
+                    <input type="text" placeholder="Enter your Name">
+                    <input type="text" placeholder="Enter a valid email address">
+                    <textarea placeholder="Enter your message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <img src="images/icons/fb.png" alt="Social Media Icons">
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer id="footer">
+        <div id="footerId" class="wrapper">
+            <p>All Rights reserved (c) Webclass 2022</p>
+        </div>
+    </footer>
+</body>
+</html>
